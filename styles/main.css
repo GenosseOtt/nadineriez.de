@@ -71,9 +71,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
     text-decoration: none;
-    color: #2C3E50;
+    color: black;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -81,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active {
-    color: #E3000F;
+    color: #E3000F !important;
     font-weight: 600;
 }
 
