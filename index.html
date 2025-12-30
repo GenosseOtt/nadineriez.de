@@ -3,323 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nadine Riez - Politikerin und Aktivistin für soziale Gerechtigkeit">
+    <meta name="description" content="Nadine Riez - Deine Stimme für soziale Gerechtigkeit in Berlin.">
     <meta name="author" content="Nadine Riez">
-    <title>Nadine Riez - Für eine gerechtere Gesellschaft</title>
+    <meta http-equiv="Content-Language" content="de">
+    <title>Nadine Riez - Gemeinsam für ein starkes Berlin</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Nadine Riez</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Start</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Über mich</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#engagement" class="nav-link">Engagement</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projekte" class="nav-link">Projekte</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Kontakt</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hallo, ich bin <span class="highlight-word">Nadine Riez</span></h1>
-                <p class="hero-subtitle">Politikerin und Aktivistin für soziale Gerechtigkeit</p>
-                <p class="hero-description">
-                    Ich setze mich leidenschaftlich für eine gerechtere Gesellschaft ein, in der alle Menschen 
-                    die gleichen Chancen haben. Gemeinsam können wir Veränderungen bewirken.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-spd">Mehr erfahren</a>
-                    <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="80" fill="#e1e7ef"/>
-                        <text x="100" y="110" text-anchor="middle" font-family="Inter" font-size="20" fill="#6b7280">Foto</text>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-        <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Header & Navigation -->
+    <header class="main-header">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Über mich</h2>
-                <p class="section-intro">
-                    Erfahren Sie mehr über meine politische Vision und meinen Weg in die Politik
-                </p>
+            <a href="#home" class="logo">Nadine Riez</a>
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li><a href="#kennenlernen">Lern mich kennen</a></li>
+                    <li><a href="#themen">Hierfür kämpfe ich</a></li>
+                    <li><a href="#darum-spd">Darum SPD</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" aria-label="Menü öffnen" aria-controls="main-nav" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="brand">
+                <img src="images/SPD_Logo_Weiss.svg" alt="SPD Logo" class="spd-logo" />
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="political-quote">
-                        "Politik muss von den Menschen für die Menschen gemacht werden. Deshalb ist mir der direkte Dialog mit den Bürgerinnen und Bürgern so wichtig."
-                    </div>
-                    <p>
-                        Willkommen auf meiner Website! Ich bin Nadine Riez, Politikerin und engagierte Bürgerin, 
-                        die sich für eine gerechtere und solidarischere Gesellschaft einsetzt. Mein politisches 
-                        Engagement wurzelt in der festen Überzeugung, dass Politik für die Menschen da sein muss.
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span>Gemeinsam für</span>
+                        <span>soziale Gerechtigkeit.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Ich bin Nadine Riez und ich kämpfe für ein Berlin, in dem alle Menschen die gleichen Chancen haben – auf bezahlbaren Wohnraum, gute Bildung und ein sicheres Leben.
                     </p>
-                    <p>
-                        Als Mitglied der SPD kämpfe ich täglich für bessere Lebensbedingungen aller Bürgerinnen 
-                        und Bürger. Besonders wichtig sind mir dabei Themen wie soziale Gerechtigkeit, 
-                        Chancengleichheit, bezahlbarer Wohnraum und eine starke Gesundheitsversorgung.
-                    </p>
-                    <div class="schwerpunkte">
-                        <h3>Meine politischen Schwerpunkte</h3>
-                        <div class="schwerpunkt-tags">
-                            <span class="schwerpunkt-tag">Armutsbekämpfung</span>
-                            <span class="schwerpunkt-tag">Soziale Gerechtigkeit</span>
-                            <span class="schwerpunkt-tag">Bezahlbarer Wohnraum</span>
-                            <span class="schwerpunkt-tag">Gesundheitsversorgung</span>
-                            <span class="schwerpunkt-tag">Chancengleichheit</span>
-                            <span class="schwerpunkt-tag">Bildung</span>
-                        </div>
+                    <div class="hero-buttons">
+                        <a href="#themen" class="btn btn-secondary">Meine Themen</a>
+                        <a href="#kennenlernen" class="btn btn-tertiary">Lern mich kennen</a>
                     </div>
                 </div>
+                <div class="hero-figure">
+                    <img src="images/landingpage-front.png" alt="Silhouette von Nadine Riez">
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-background"></div>
+        </section>        
 
-    <!-- Engagement Section -->
-    <section id="engagement" class="engagement">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Mein Engagement</h2>
-                <p class="section-intro">Aktuelle Funktionen und Mitgliedschaften</p>
-            </div>
-            <div class="engagement-grid">
-                <div class="engagement-card">
-                    <h3>Parteifunktionen</h3>
-                    <ul class="engagement-list">
-                        <li>Co-Sprecherin des AK "Armutsbekämpfung, Chancengleichheit und Antiklassismus"</li>
-                        <li>Stellvertretende Vorsitzende der Abteilung Alexanderplatz</li>
-                        <li>Vorstandsmitglied der SPD Berlin-Mitte</li>
-                        <li>Vorstandsmitglied der AG sozialdemokratischer Frauen Berlin</li>
-                    </ul>
-                </div>
-                
-                <div class="engagement-card">
-                    <h3>Politische Gremien</h3>
-                    <ul class="engagement-list">
-                        <li>Stellvertretende Vorsitzende des Fachausschusses IX Soziales, Gesundheit und Verbraucherschutz</li>
-                        <li>Stellvertretende Vorsitzende der AG Bildung Mitte</li>
-                        <li>Stellvertretende Bürgerdeputierte der BVV Mitte</li>
-                    </ul>
-                </div>
-                
-                <div class="engagement-card">
-                    <h3>Initiativen & Projekte</h3>
-                    <ul class="engagement-list">
-                        <li>Barrierefreie Kältehilfeplätze in Mitte (BVV)</li>
-                        <li>Maßnahmenpaket zur Stärkung der Berliner Obdachlosenhilfe</li>
-                        <li>Hitzeschutzmaßnahmen für Berlin-Mitte</li>
-                        <li>Willkommensstrategie für Kinder und Jugendliche mit Fluchthintergrund</li>
-                    </ul>
+        <!-- Lern mich kennen Section -->
+        <section id="kennenlernen" class="kennenlernen-section">
+            <div class="split-layout">
+                <div class="image-pane" style="background-image: url('images/nadine1.jpeg');"></div>
+                <div class="text-pane">
+                    <div class="text-content">
+                        <h2 class="section-title">Lern mich kennen</h2>
+                        <p class="section-subtitle">Mein Weg in die Politik ist geprägt von dem Wunsch, aktiv zu gestalten und für die Menschen da zu sein.</p>
+                        <h3>Von der Bürgerin zur Politikerin</h3>
+                        <p>Willkommen! Ich bin Nadine Riez. Mein politisches Engagement wurzelt in der festen Überzeugung, dass Politik für die Menschen gemacht werden muss. Als Mitglied der SPD kämpfe ich täglich für bessere Lebensbedingungen in unserer Stadt. Der direkte Dialog mit Ihnen, den Bürgerinnen und Bürgern, ist mir dabei besonders wichtig.</p>
+                        <p>Ich glaube an eine Gesellschaft, die zusammenhält und in der niemand zurückgelassen wird. Deshalb setze ich mich mit ganzer Kraft für soziale Gerechtigkeit, Chancengleichheit und eine starke Gemeinschaft ein.</p>
+                        <a href="#kontakt" class="btn btn-primary">Schreib mir eine Nachricht</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Statistics Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Erfolge in Zahlen</h2>
-                <p class="section-intro">Konkrete Ergebnisse meiner politischen Arbeit</p>
+        <!-- Hierfür kämpfe ich Section -->
+        <section id="themen" class="feature-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hierfür kämpfe ich</h2>
+                    <p class="section-subtitle">Meine politischen Schwerpunkte für ein lebenswertes Berlin.</p>
+                </div>
+                <div class="feature-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card">
+                        <img src="images/wohnen.jpg" alt="Bezahlbarer Wohnraum" class="feature-image" />
+                        <div class="feature-content">
+                            <h3 class="feature-title">Bezahlbarer Wohnraum</h3>
+                            <p class="feature-description">Jeder Mensch braucht ein Zuhause. Ich setze mich für mehr kommunalen Wohnungsbau, faire Mieten und die Stärkung gemeinwohlorientierter Wohnprojekte ein.</p>
+                            <p class="feature-initiative"><strong>Initiative:</strong> "Wohnen bezahlbar machen" – Programm für sozialen Wohnungsbau und Mieterschutz.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card">
+                        <img src="images/wohnen.jpg" alt="Soziale Gerechtigkeit" class="feature-image" />
+                        <div class="feature-content">
+                            <h3 class="feature-title">Soziale Gerechtigkeit</h3>
+                            <p class="feature-description">Ich kämpfe gegen Armut und Klassismus. Chancengerechtigkeit für alle – unabhängig von Herkunft, Einkommen oder Alter.</p>
+                            <p class="feature-initiative"><strong>Initiative:</strong> "Gerechtigkeit jetzt" – Maßnahmen gegen Kinderarmut, für Bildung und Teilhabe.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card">
+                        <img src="images/wohnen.jpg" alt="Starke Gesundheitsversorgung" class="feature-image" />
+                        <div class="feature-content">
+                            <h3 class="feature-title">Starke Gesundheitsversorgung</h3>
+                            <p class="feature-description">Gesundheit ist ein Grundrecht. Ich setze mich für eine flächendeckende, solidarische und für alle zugängliche Versorgung ein.</p>
+                            <p class="feature-initiative"><strong>Initiative:</strong> "Gesund vor Ort" – Ausbau von Kiez-Gesundheitszentren und Prävention.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Initiativen eingereicht</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Fachausschüsse</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Bürger*innen erreicht</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Jahre Engagement</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projekte" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Aktuelle Projekte</h2>
-                <p class="section-intro">Konkrete Maßnahmen für eine bessere Zukunft</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="300" height="200" fill="#f3f4f6"/>
-                                <text x="150" y="105" text-anchor="middle" font-family="Inter" font-size="16" fill="#6b7280">Obdachlosenhilfe</text>
-                            </svg>
+        <!-- Kontakt/Mitmachen Section -->
+        <section id="kontakt" class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Gestalte mit.</h2>
+                <p class="cta-subtitle">Deine Stimme und dein Engagement machen den Unterschied. Lass uns gemeinsam für ein besseres Berlin arbeiten.</p>
+                <div class="contact-form-container">
+                    <form class="contact-form-modern">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Dein Name" required>
+                            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Obdachlosigkeit bekämpfen</h3>
-                        <p class="project-description">
-                            Barrierefreie Plätze schaffen, Kältehilfe ohne Abweisungen bereitstellen und das 
-                            Housing First Konzept weiterentwickeln. Jeder Mensch verdient ein Zuhause.
-                        </p>
-                        <div class="project-tags">
-                            <span class="schwerpunkt-tag">Soziales</span>
-                            <span class="schwerpunkt-tag">Housing First</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="300" height="200" fill="#f3f4f6"/>
-                                <text x="150" y="105" text-anchor="middle" font-family="Inter" font-size="16" fill="#6b7280">Gesundheit</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Gesundheitsversorgung sichern</h3>
-                        <p class="project-description">
-                            Gesundheitsversorgung für alle gewährleisten, Clearingstelle verstetigen und 
-                            mobile Hilfe ausbauen. Gesundheit ist ein Grundrecht.
-                        </p>
-                        <div class="project-tags">
-                            <span class="schwerpunkt-tag">Gesundheit</span>
-                            <span class="schwerpunkt-tag">Soziale Hilfe</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="300" height="200" fill="#f3f4f6"/>
-                                <text x="150" y="105" text-anchor="middle" font-family="Inter" font-size="16" fill="#6b7280">Bildung</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Klassismus überwinden</h3>
-                        <p class="project-description">
-                            Lebensleistung anerkennen, Chancengerechtigkeit ermöglichen und Altersarmut 
-                            verhindern. Bildung und soziale Herkunft dürfen nicht über Zukunftschancen entscheiden.
-                        </p>
-                        <div class="project-tags">
-                            <span class="schwerpunkt-tag">Bildung</span>
-                            <span class="schwerpunkt-tag">Antiklassismus</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Kontakt</h2>
-                <p class="section-intro">Lassen Sie uns ins Gespräch kommen</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>
-                        Haben Sie Fragen, Anregungen oder möchten Sie sich politisch engagieren? 
-                        Ich freue mich über jeden Austausch und bin für Ihre Anliegen da. 
-                        Gemeinsam können wir Veränderungen bewirken.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <h4>E-Mail</h4>
-                            <p>nadine.riez@spd.de</p>
-                        </div>
-                        <div class="contact-method">
-                            <h4>Social Media</h4>
-                            <div class="social-links">
-                                <a href="#" class="social-link">Twitter</a>
-                                <a href="#" class="social-link">Facebook</a>
-                                <a href="#" class="social-link">Instagram</a>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <h4>Bürgersprechstunde</h4>
-                            <p>Jeden ersten Mittwoch im Monat, 18:00-19:30 Uhr<br>
-                            Terminvereinbarung per E-Mail</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Betreff</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Nachricht</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                        <textarea name="message" placeholder="Deine Nachricht an mich" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-secondary">Nachricht senden</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Darum SPD Section -->
+        <section id="darum-spd" class="content-section spd-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Darum SPD</h2>
+                    <p class="section-subtitle">Seit über 150 Jahren die Partei für Fortschritt, Gerechtigkeit und Solidarität.</p>
+                </div>
+                <div class="two-column-layout reverse">
+                    <div class="column-text">
+                        <h3>Aus Überzeugung. Für die Menschen.</h3>
+                        <p>Die SPD ist meine politische Heimat, weil sie die Partei ist, die den Menschen in den Mittelpunkt stellt. Unsere Grundwerte – Freiheit, Gerechtigkeit und Solidarität – sind heute relevanter denn je. Wir sind die Kraft, die für den sozialen Zusammenhalt kämpft und den Wandel mutig gestaltet.</p>
+                        <p>Von der Einführung des Mindestlohns bis zum Kampf für die Gleichstellung – die SPD hat die Geschichte unseres Landes positiv geprägt. Ich bin stolz, Teil dieser Bewegung zu sein und diese Arbeit fortzusetzen.</p>
+                        <a href="https://www.spd.de" target="_blank" class="btn btn-primary">Mehr über die SPD</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="main-footer-modern">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <h3 class="footer-logo">Nadine Riez</h3>
+                    <p>Deine Stimme für soziale Gerechtigkeit.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#kennenlernen">Lern mich kennen</a></li>
+                        <li><a href="#themen">Hierfür kämpfe ich</a></li>
+                        <li><a href="#darum-spd">Darum SPD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Folge mir</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
                 <p>&copy; 2025 Nadine Riez. Alle Rechte vorbehalten.</p>
-                <p>Für eine gerechtere Gesellschaft ❤️</p>
+                <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
             </div>
         </div>
     </footer>
