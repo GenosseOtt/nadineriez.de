@@ -214,6 +214,67 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0; /* take the width they need */
 }
 
+/* Navbar icons */
+.nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.nav-icon svg {
+    width: 22px; /* 20% larger */
+    height: 22px;
+    fill: #ffffff; /* all icons white */
+}
+.nav-icon svg *, .nav-icon svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+/* Support external SVGs via <img> and force white */
+.nav-icon img {
+    width: 22px; /* 20% larger */
+    height: 22px;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+/* Hover: turn icons black */
+.main-nav a:hover .nav-icon svg,
+.main-nav a:hover .nav-icon svg * {
+    fill: #111111 !important;
+    stroke: #111111 !important;
+}
+.main-nav a:hover .nav-icon img {
+    filter: brightness(0);
+}
+
+/* Active state should match hover visuals */
+.main-nav a.is-active .nav-icon svg,
+.main-nav a.is-active .nav-icon svg * {
+    fill: #111111 !important;
+    stroke: #111111 !important;
+}
+.main-nav a.is-active .nav-icon img {
+    filter: brightness(0);
+}
+/* Ensure mobile menu keeps icons white as requested */
+@media (max-width: 768px) {
+    .main-header .main-nav a .nav-icon svg { fill: #ffffff; }
+    .main-header .main-nav a .nav-icon img { filter: brightness(0) invert(1); }
+    /* Mobile hover & active: icons black */
+    .main-header .main-nav a:hover .nav-icon svg,
+    .main-header .main-nav a:hover .nav-icon svg *,
+    .main-header .main-nav a.is-active .nav-icon svg,
+    .main-header .main-nav a.is-active .nav-icon svg * {
+        fill: #111111 !important;
+        stroke: #111111 !important;
+    }
+    .main-header .main-nav a:hover .nav-icon img,
+    .main-header .main-nav a.is-active .nav-icon img {
+        filter: brightness(0);
+    }
+}
+
 .nav-link:hover, .main-nav a:hover {
     color: var(--spd-red);
 }
@@ -790,6 +851,14 @@ section {
     gap: 2.5rem;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Darum SPD: single column layout and centered tagline */
+#darum-spd .two-column-layout {
+    grid-template-columns: 1fr;
+}
+#darum-spd h3 {
+    text-align: center;
 }
 
 .contact-info p {
