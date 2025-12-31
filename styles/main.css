@@ -265,6 +265,13 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #e2e8f0;
     box-shadow: none;
 }
+/* Apply hover-like style when section is active */
+.main-nav a:not(.nav-cta).is-active {
+    background: #ffffff;
+    color: #333333;
+    border-color: #e2e8f0;
+    box-shadow: none;
+}
 
 /* Hero Section */
 .hero-section {
@@ -1034,6 +1041,12 @@ section {
         min-height: 44px;
     }
     .main-header .main-nav a:hover {
+        background: #f5f7fb;
+        color: #111111;
+        border-color: #e2e8f0;
+    }
+    /* Mobile: active state styled like hover */
+    .main-header .main-nav a.is-active {
         background: #f5f7fb;
         color: #111111;
         border-color: #e2e8f0;

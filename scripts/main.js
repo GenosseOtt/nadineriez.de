@@ -47,25 +47,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active navigation link highlighting
+// Active navigation link highlighting (apply hover-like style)
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
+    const navLinks = document.querySelectorAll('.main-nav a');
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop && 
+        if (window.pageYOffset >= sectionTop &&
             window.pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove('is-active');
         if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
+            link.classList.add('is-active');
         }
     });
 });
