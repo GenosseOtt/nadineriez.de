@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #660007b9;
+    background: linear-gradient(135deg, var(--spd-red) 0%, var(--spd-red-dark) 100%);
     backdrop-filter: saturate(180%) blur(8px);
     /* border-bottom: 3px solid var(--spd-red); */
     z-index: 1000;
@@ -344,12 +344,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0;
     color: white;
     overflow: hidden;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-background {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #660007 0%, #E3000F 40%, #C5003E 100%);
+    background: linear-gradient(135deg, rgba(12, 0, 18, 0.75) 0%, rgba(227, 0, 15, 0.30) 40%, rgba(120, 0, 30, 0.70) 100%);
     background-size: 220% 220%;
     background-position: 20% 20%;
     filter: none;
@@ -364,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 0.9fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
     text-align: left;
