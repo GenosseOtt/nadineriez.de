@@ -82,7 +82,7 @@ Die Website umfasst diese Hauptbereiche:
 - **HTML5**: Semantisches Markup und Struktur
 - **CSS3**: Modernes Styling mit Flexbox und Grid
 - **JavaScript (ES6+)**: Interaktive Funktionalität
-- **Google Fonts**: Epilogue-Schriftfamilie für Typografie
+
 
 ## 📱 Browser-Unterstützung
 

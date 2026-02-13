@@ -21,7 +21,7 @@ Eine moderne, responsive Website für die Politikerin Nadine Riez mit offizielle
 - **Akzent**: Verschiedene Grautöne (#f8f9fa, #e9ecef)
 
 ### Typografie
-- **Schriftart**: Epilogue (300, 400, 500, 600, 700)
+ 
 - **Hierarchie**: Klare Überschriftenstruktur
 - **Lesbarkeit**: Optimierte Zeilenhöhen und Abstände
 
@@ -37,7 +37,7 @@ Eine moderne, responsive Website für die Politikerin Nadine Riez mit offizielle
 - **HTML5**: Semantische Struktur
 - **CSS3**: Grid, Flexbox, Animationen, Custom Properties
 - **JavaScript ES6+**: Moderne Syntax, DOM-Manipulation
-- **Google Fonts**: Epilogue Schriftfamilie
+ 
 
 ## 📱 Responsive Design
 

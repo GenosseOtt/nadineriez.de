@@ -10,38 +10,22 @@
     <meta name="author" content="Nadine Riez" />
     <meta http-equiv="Content-Language" content="de" />
     <title>Nadine Riez - Gemeinsam für ein starkes Berlin</title>
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script
-      async
-      src="https://analytics.johannesott.eu/js/pa-AOkJaH11JYLJJB9obH2Jg.js"
-    ></script>
-    <script>
-      ((window.plausible =
-        window.plausible ||
-        function () {
-          (plausible.q = plausible.q || []).push(arguments);
-        }),
-        (plausible.init =
-          plausible.init ||
-          function (i) {
-            plausible.o = i || {};
-          }));
-      plausible.init({
-        captureOnLocalhost: true,
-        hashBasedRouting: true,
-        outboundLinks: true,
-      });
-    </script>
+    <!-- Cookie consent banner library -->
+    <script src="https://cdn.jsdelivr.net/npm/cookies-eu-banner@2.0.1/dist/cookies-eu-banner.min.js"></script>
 
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
+      <!-- Cookie Consent Banner -->
+      <div id="cookies-eu-banner" class="cookies-banner" style="display: none;">
+        <p>Diese Website nutzt eine datenschutzfreundliche Analyse (Plausible). Mit Ihrer Zustimmung helfen Sie, die Seite zu verbessern.</p>
+        <div class="cookies-actions">
+          <button id="cookies-eu-accept" class="btn btn-secondary">Zustimmen</button>
+          <a href="impressum.html#datenschutz" class="btn btn-tertiary">Mehr erfahren</a>
+          <button id="cookies-eu-reject" class="btn">Ablehnen</button>
+        </div>
+      </div>
     <!-- Header & Navigation -->
     <header class="main-header">
       <div class="container">
@@ -317,13 +301,53 @@
         <div class="footer-bottom">
           <p>&copy; 2025 Nadine Riez. Alle Rechte vorbehalten.</p>
           <p>
-            <a href="impressum.html" data-plausible-name="footer-impressum">Impressum</a> |
-            <a href="#" data-plausible-name="footer-datenschutz">Datenschutz</a>
+            <a href="impressum.html" data-plausible-name="footer-legal">Impressum &amp; Datenschutz</a>
           </p>
         </div>
       </div>
     </footer>
 
+    <script>
+      function loadPlausible() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://analytics.johannesott.eu/js/pa-AOkJaH11JYLJJB9obH2Jg.js';
+        s.onload = function () {
+          window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments); };
+          plausible.init = plausible.init || function (i) { plausible.o = i || {}; };
+          plausible.init({ captureOnLocalhost: true, hashBasedRouting: true, outboundLinks: true });
+        };
+        document.head.appendChild(s);
+      }
+      // Simple consent handling: accept loads analytics, reject hides banner
+      document.addEventListener('DOMContentLoaded', function() {
+        var banner = document.getElementById('cookies-eu-banner');
+        var acceptBtn = document.getElementById('cookies-eu-accept');
+        var rejectBtn = document.getElementById('cookies-eu-reject');
+        var consent = localStorage.getItem('analytics_consent');
+
+        if (consent === 'accept') {
+          loadPlausible();
+        } else {
+          if (banner) banner.style.display = 'flex';
+        }
+
+        if (acceptBtn) {
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('analytics_consent', 'accept');
+            if (banner) banner.style.display = 'none';
+            loadPlausible();
+          });
+        }
+
+        if (rejectBtn) {
+          rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('analytics_consent', 'reject');
+            if (banner) banner.style.display = 'none';
+          });
+        }
+      });
+    </script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

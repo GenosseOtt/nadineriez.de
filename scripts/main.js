@@ -133,7 +133,7 @@ function showNotification(message, type = 'info') {
         border-radius: 8px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         z-index: 1001;
-        font-family: 'Epilogue', sans-serif;
+        font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
         font-weight: 500;
         max-width: 300px;
         animation: slideInRight 0.3s ease-out;

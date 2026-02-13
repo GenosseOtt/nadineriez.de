@@ -4,35 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impressum - Nadine Riez</title>
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://analytics.johannesott.eu/js/pa-AOkJaH11JYLJJB9obH2Jg.js"></script>
-    <script>
-      ((window.plausible =
-        window.plausible ||
-        function () {
-          (plausible.q = plausible.q || []).push(arguments);
-        }),
-        (plausible.init =
-          plausible.init ||
-          function (i) {
-            plausible.o = i || {};
-          }));
-      plausible.init({
-        captureOnLocalhost: true,
-        hashBasedRouting: true,
-        outboundLinks: true,
-      });
-    </script>
+    <!-- Cookie consent banner library -->
+    <script src="https://cdn.jsdelivr.net/npm/cookies-eu-banner@2.0.1/dist/cookies-eu-banner.min.js"></script>
 
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookies-eu-banner" class="cookies-banner" style="display: none;">
+      <p>Diese Website nutzt eine datenschutzfreundliche Analyse (Plausible). Mit Ihrer Zustimmung helfen Sie, die Seite zu verbessern.</p>
+      <div class="cookies-actions">
+        <button id="cookies-eu-accept" class="btn btn-secondary">Zustimmen</button>
+        <a href="#datenschutz" class="btn btn-tertiary">Mehr erfahren</a>
+        <button id="cookies-eu-reject" class="btn">Ablehnen</button>
+      </div>
+    </div>
     <header class="main-header">
       <div class="container">
         <a href="index.html#home" class="logo" data-plausible-name="header-logo">Nadine Riez</a>
@@ -66,6 +53,40 @@
           </div>
         </div>
       </section>
+
+      <section class="content-section" id="datenschutz">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Datenschutz</h2>
+            <p class="section-subtitle">Informationen gemäß DSGVO</p>
+          </div>
+          <div class="two-column-layout" style="grid-template-columns: 1fr">
+            <div class="column-text" style="max-width: 800px;">
+              <h3>Verantwortliche</h3>
+              <p><strong>Verantwortlich:</strong> Nadine Riez<br/>E-Mail: <a href="mailto:nadine.riez@posteo.de">nadine.riez@posteo.de</a> · Telefon: <a href="tel:+4915755666274">+49 157 556 662 74</a></p>
+
+              <h3>Analyse mit Plausible</h3>
+              <p>Diese Website verwendet <a href="https://plausible.io/" target="_blank" rel="noopener">Plausible Analytics</a>, eine datenschutzfreundliche, cookielose Analyse. Es werden keine personenbezogenen Daten gespeichert und keine nutzerbezogenen Profile erstellt. Wir messen aggregierte Metriken wie Seitenaufrufe, Referer und Endgeräte.</p>
+              <p>Die Analyse wird nur nach Ihrer Zustimmung über den Cookie-Hinweis aktiviert. Ohne Zustimmung werden keine Analyse-Skripte geladen.</p>
+
+              <h3>Hosting</h3>
+              <p>Die Website wird als statische Seite bereitgestellt. Es werden serverseitig keine Tracking-Cookies gesetzt.</p>
+
+              <h3>Ihre Rechte</h3>
+              <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie ein Widerspruchsrecht. Wenden Sie sich dazu bitte an die oben genannte E-Mail-Adresse.</p>
+
+              <h3>Verwendete Open-Source-Komponenten</h3>
+              <ul>
+                <li><a href="https://plausible.io/" target="_blank" rel="noopener">Plausible Analytics</a> – Datenschutzfreundliche Webanalyse</li>
+                <li><a href="https://github.com/AlexisBondu/cookies-eu-banner" target="_blank" rel="noopener">cookies-eu-banner</a> – Cookie-Hinweis (Open Source)</li>
+                
+              </ul>
+
+              <p><a href="#impressum" class="btn btn-tertiary">Zum Impressum</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer-modern">
@@ -93,11 +114,51 @@
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Nadine Riez. Alle Rechte vorbehalten.</p>
-          <p><a href="impressum.html" data-plausible-name="footer-impressum">Impressum</a> | <a href="#" data-plausible-name="footer-datenschutz">Datenschutz</a></p>
+          <p><a href="impressum.html" data-plausible-name="footer-legal">Impressum &amp; Datenschutz</a></p>
         </div>
       </div>
     </footer>
 
+    <script>
+      function loadPlausible() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://analytics.johannesott.eu/js/pa-AOkJaH11JYLJJB9obH2Jg.js';
+        s.onload = function () {
+          window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments); };
+          plausible.init = plausible.init || function (i) { plausible.o = i || {}; };
+          plausible.init({ captureOnLocalhost: true, hashBasedRouting: true, outboundLinks: true });
+        };
+        document.head.appendChild(s);
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        var banner = document.getElementById('cookies-eu-banner');
+        var acceptBtn = document.getElementById('cookies-eu-accept');
+        var rejectBtn = document.getElementById('cookies-eu-reject');
+        var consent = localStorage.getItem('analytics_consent');
+
+        if (consent === 'accept') {
+          loadPlausible();
+        } else {
+          if (banner) banner.style.display = 'flex';
+        }
+
+        if (acceptBtn) {
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('analytics_consent', 'accept');
+            if (banner) banner.style.display = 'none';
+            loadPlausible();
+          });
+        }
+
+        if (rejectBtn) {
+          rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('analytics_consent', 'reject');
+            if (banner) banner.style.display = 'none';
+          });
+        }
+      });
+    </script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
