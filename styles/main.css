@@ -923,6 +923,54 @@ section {
 .contact-form-modern input::placeholder,
 .contact-form-modern textarea::placeholder { color: rgba(255,255,255,0.85); }
 
+/* Contact actions (Hotline, Instagram, E-Mail) */
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+}
+.contact-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.contact-action:hover {
+    background: #ffffff;
+    color: #111111;
+    border-color: #e2e8f0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.contact-action .action-icon img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease;
+}
+.contact-action:hover .action-icon img {
+    filter: brightness(0);
+}
+.contact-action .action-text {
+    font-weight: 800;
+}
+.contact-action .action-subtext {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .contact-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Contact Form */
 .contact-form {
     background: white;
