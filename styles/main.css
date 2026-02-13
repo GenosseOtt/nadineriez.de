@@ -1269,6 +1269,13 @@ section {
     .section-title { font-size: 2rem; }
 }
 
+/* Large desktop: shift hero background image down slightly */
+@media (min-width: 1200px) {
+    .hero-section {
+        background-position: center calc(50% + 50px);
+    }
+}
+
 /* Large screens: show two feature cards per row */
 @media (min-width: 1024px) {
     .feature-grid { grid-template-columns: repeat(2, 1fr); }
