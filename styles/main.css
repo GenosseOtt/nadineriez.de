@@ -1227,7 +1227,7 @@ section {
 
     /* Stack hero */
     /* Add top padding so hero content isn't covered by fixed navbar */
-    #home { padding-top: 64px; }
+    #home { padding-top: 88px; }
     
     .hero-section .container {
         grid-template-columns: 1fr;
@@ -1236,7 +1236,7 @@ section {
         position: relative; /* allow absolute silhouette positioning */
     }
     /* Place silhouette centered, slightly left, behind content */
-    .hero-section .hero-content { position: relative; z-index: 2; }
+    .hero-section .hero-content { position: relative; z-index: 2; top: 10vh; }
     .hero-section .hero-figure {
         position: absolute;
         left: 30%;
